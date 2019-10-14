@@ -43,5 +43,6 @@ One thing to note, the free plan of Git LFS comes with 1g of storage total and 1
 
 ## Resources
 
-- [How to Git with Unity post](https://thoughtbot.com/blog/how-to-git-with-unity)
+- [Version control: Effective use, issues and thoughts, from a gamedev perspective](https://www.what-could-possibly-go-wrong.com/version-control/) - a good overview of the uses and challenges of version control in game dev
+- [How to Git with Unity](https://thoughtbot.com/blog/how-to-git-with-unity) - a concise post of Git + Unity
 - [Unity's manual of VCS](https://docs.unity3d.com/Manual/VersionControl.html)
