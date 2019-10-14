@@ -20,12 +20,11 @@ The initial setup for a project requires a few steps, but you only have to do it
   - Open up your Unity project folder in file explorer/finder. It's the folder that contains "Assets/", "ProjectSettings/", "Packages/", etc. In other words, select the folder one directory up from "Assets/". One quick way to get there from Unity, right click on "Assets" in your Project window and select "Show in Explorer".
   - Add the .gitignore and .gitattributes files contained in this repository to your project folder. You can download a zip [here](https://github.com/mikewesthad/unity-git-and-lfs/archive/master.zip). Again, they should be next to - not inside - your "Assets" folder.
   - It's important that you do this step first before creating the repository so that the appropriate files are ignored by git and the large files are set up to go to large file storage (LFS).
-- Set up a new repository. There are a number of ways to do this. The way described below is through [GitHub Desktop](https://desktop.github.com/).
-  - Create a new repository in your Unity project:
-    - `File > Add local repository`
-    - Under local path, select the folder that contains your Unity project (i.e. one up from "Assets").
-    - It will warn you that this isn't a git repo and give you a link to "create a repository" here. Click that.
-    - On the next screen, click "create repository".
+- Set up a new repository. There are a number of ways to do this. To initialize a new git repository in your Unity project folder using [GitHub Desktop](https://desktop.github.com/):
+  - Click on `File > Add local repository` in the toolbar.
+  - Under local path, select the folder that contains your Unity project (i.e. one directory up from "Assets").
+  - It will warn you that this isn't a git repo and give you a link to "create a repository" here. Click that.
+  - On the next screen, click "create repository".
 - Set up Git LFS:
   - If you haven't already, install [Git LFS](https://git-lfs.github.com).
   - Navigate to your repository and run `git lfs install` in your command prompt/terminal. If you have your repository selected in  GitHub Desktop, you can click `Repository > Open in Command Prompt` from the toolbar to open up a terminal window. Type in `git lfs install` and hit enter. You should see a message like "Git LFS initialized".
@@ -34,6 +33,7 @@ The initial setup for a project requires a few steps, but you only have to do it
   - Click the "Publish repository" button near the top of the screen.
   - If you are creating this repository for a project in class, uncheck "Keep this code private".
   - Click "Publish repository".
+  - Whew! It's live now. You go straight to where it is stored on GitHub via `Repository > View on GitHub` in the GitHub Desktop toolbar.
 
 ## Maintenance
 
