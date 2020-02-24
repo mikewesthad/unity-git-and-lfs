@@ -1,6 +1,6 @@
 # Unity + Git + Git LFS
 
-This is a template for setting up Unity + Git + Git Large File Storage (LFS). 
+This is a tutorial & template for setting up Unity + Git + Git Large File Storage (LFS). 
 
 There are a couple of challenges when it comes to using git (or version control software in general) with Unity:
 
@@ -9,25 +9,37 @@ There are a couple of challenges when it comes to using git (or version control 
 
 ## Initial Setup
 
-The initial setup for a project requires a few steps, but you only have to do it once per project. This guide assumes you have an existing Unity project that you want to set up as a git repository. If you don't, just create a blank new one. To set up a Unity project with Git and Git LFS:
+The initial setup for a project requires a few steps, but you only have to do it once per project. To set up a Unity project with Git and Git LFS:
 
-- Configure Unity's project settings:
-  - Open the editor settings window (`Edit > Project Settings > Editor`).
-  - Set Asset Serialization mode to "Force Text." It should default to this in the latest version of unity.
-  - Set Version Control mode to "Visiable Meta Files."
-  - Save your project.
-- Adding .gitignore and .gitattributes:
-  - Open up your Unity project folder in file explorer/finder. It's the folder that contains "Assets/", "ProjectSettings/", "Packages/", etc. In other words, select the folder one directory up from "Assets/". One quick way to get there from Unity, right click on "Assets" in your Project window and select "Show in Explorer".
-  - Add the .gitignore and .gitattributes files contained in this repository to your project folder. You can download a zip [here](https://github.com/mikewesthad/unity-git-and-lfs/archive/master.zip). Again, they should be next to - not inside - your "Assets" folder.
-  - It's important that you do this step first before creating the repository so that the appropriate files are ignored by git and the large files are set up to go to large file storage (LFS).
-- Set up a new repository. There are a number of ways to do this. To initialize a new git repository in your Unity project folder using [GitHub Desktop](https://desktop.github.com/):
-  - Click on `File > Add local repository` in the toolbar.
-  - Under local path, select the folder that contains your Unity project (i.e. one directory up from "Assets").
-  - It will warn you that this isn't a git repo and give you a link to "create a repository" here. Click that.
-  - On the next screen, click "create repository".
+### Preparing your Computer
+
+- Create a [GitHub account](https://github.com/join).
+- Install the required software on your machine:
+  - [Unity](https://unity.com/).
+  - [GitHub Desktop](https://desktop.github.com/).
+  - [Git LFS](https://git-lfs.github.com).
+  - If you are in the IAM labs/classrooms, these should be installed. You may need to open the software center to activate GitHub Desktop.
+- Open up GitHub Desktop and login in with your GitHub account.
+
+### Creating the Repository
+
+- Create a new repository for your project from GitHub Desktop:
+  - `File > New Repository` or `CTRL + N`.
+  - Give it a name and choose the local path where it will be created. (If you are in an IAM lab/classroom, do NOT put it on the network home drive AKA z drive.)
+- Add the .gitignore and .gitattributes:
+  - [Download the files](https://github.com/mikewesthad/unity-git-and-lfs/archive/master.zip) from this repo.
+  - Unzip the files and copy over the .gitignore and .gitattributes files to your git repository.
+  - Create a commit from GitHub Desktop with those two files.
+  - It's important that you do this step first before adding any Unity project files.
 - Set up Git LFS:
-  - If you haven't already, install [Git LFS](https://git-lfs.github.com).
-  - Navigate to your repository and run `git lfs install` in your command prompt/terminal. If you have your repository selected in  GitHub Desktop, you can click `Repository > Open in Command Prompt` from the toolbar to open up a terminal window. Type in `git lfs install` and hit enter. You should see a message like "Git LFS initialized".
+  - Navigate to your repository and run `git lfs install` in your command prompt/terminal. If you have your repository selected in GitHub Desktop, you can click `Repository > Open in Command Prompt` from the toolbar to open up a terminal window. Type in `git lfs install` and hit enter. You should see a message like "Git LFS initialized".
+- Add your Unity project to the repository:
+  - Create a new Unity project or grab an existing project.
+  - Open up your Unity project folder in file explorer/finder. It's the folder that contains "Assets/", "ProjectSettings/", "Packages/", etc. In other words, select the folder one directory up from "Assets/". One quick way to get there from Unity, right click on "Assets" in your Project window and select "Show in Explorer".
+  - Copy all the contents of your project folder into your repository (e.g. "Assets/", "ProjectSettings/", etc.).
+- Make a commit of the project:
+  - Head back to GitHub desktop.
+  - Select your files and make a commit.
 - Publish your repository:
   - Head to GitHub Desktop and select your repository.
   - Click the "Publish repository" button near the top of the screen.
@@ -37,7 +49,7 @@ The initial setup for a project requires a few steps, but you only have to do it
 
 ## Maintenance
 
-Now that the repository is all set up, you can simply commit and push/pull as you work on the project! If you want to set up the repository on a new machine, simply use GitHub Desktop `File > Clone Repository` and select the repository.
+Now that the repository is all set up, you can simply commit and push/pull as you work on the project! If you want to set up the repository on a new machine, simply use GitHub Desktop `File > Clone Repository` and select the repository. (Note: you can't just download a zip from GitHub.com when using Git LFS!)
 
 One thing to note, the free plan of Git LFS comes with 1g of storage total and 1g of bandwidth per billing cycle/month. Anything you push/pull from LFS counts against that. You can see your current usage under `Settings > Billing`.
 
