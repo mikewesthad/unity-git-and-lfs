@@ -23,6 +23,8 @@ The initial setup for a project requires a few steps, but you only have to do it
 
 ### Creating the Repository
 
+You can watch a video of this process [here](https://colum2.instructuremedia.com/embed/de36691b-707a-4877-910c-e25b0f0d45aa), or follow along below:
+
 - Create a new repository for your project from GitHub Desktop:
   - `File > New Repository` or `CTRL + N`.
   - Give it a name and choose the local path where it will be created. (If you are in an IAM lab/classroom, do NOT put it on the network home drive AKA z drive.)
@@ -47,9 +49,18 @@ The initial setup for a project requires a few steps, but you only have to do it
   - Click "Publish repository".
   - Whew! It's live now. You go straight to where it is stored on GitHub via `Repository > View on GitHub` in the GitHub Desktop toolbar.
 
-## Maintenance
+Now that the repository is all set up, you can simply commit and push/pull as you work on the project! Make sure to always commit and sync before leaving the lab.
 
-Now that the repository is all set up, you can simply commit and push/pull as you work on the project! If you want to set up the repository on a new machine, simply use GitHub Desktop `File > Clone Repository` and select the repository. (Note: you can't just download a zip from GitHub.com when using Git LFS!)
+## Cloning the Repository Elsewhere
+
+Now that you've got this Unity project on GitHub, you can "clone" it to a new computer:
+
+- Make sure you have GitHub Desktop + Git LFS + Unity on the computer.
+- Open GitHub Desktop and log in.
+- Click on `File => Clone Repository..." (or CTRL + SHIFT + O). Choose the repository and the local path where it should be cloned on the computer.
+- GitHub Desktop may prompt you to install Git LFS. If it does, allow it. If it doesn't, repeat the process from the previous section where we ran `git lfs install` from a terminal window.
+
+## Notes
 
 One thing to note, the free plan of Git LFS comes with 1g of storage total and 1g of bandwidth per billing cycle/month. Anything you push/pull from LFS counts against that. You can see your current usage under `Settings > Billing`.
 
